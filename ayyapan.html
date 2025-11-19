@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Varshan's Vibe With Coding</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body {
+            perspective: 1200px; /* for 3D perspective */
+        }
+        .card-3d-hover {
+            transition: transform 0.4s cubic-bezier(.03,.98,.52,.99), box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            will-change: transform;
+            box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.15);
+            border-radius: 0.5rem;
+        }
+        .card-3d-hover:hover {
+            transform: rotateX(12deg) rotateY(20deg);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.35);
+        }
+        .instagram-link {
+            position: relative;
+            display: inline-block;
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease, transform 0.3s ease;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+        .instagram-link:hover {
+            color: #833AB4;
+            transform: rotateY(15deg) rotateX(10deg) translateZ(10px);
+        }
+        .follow-tooltip {
+            position: absolute;
+            top: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #833AB4;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.3rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+        }
+        .instagram-link:hover .follow-tooltip {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .btn-primary {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #004085;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <header class="mb-5 text-center">
+            <h1 class="display-4 fw-bold">Varshan's Vibe With Coding</h1>
+            <p class="lead">
+                Instagram ID: 
+                <a href="https://instagram.com/varshan_saravanan01" target="_blank" class="instagram-link">
+                    @varshan_saravanan01 <i class="fab fa-instagram"></i>
+                    <span class="follow-tooltip">Follow for more</span>
+                </a>
+            </p>
+        </header>
+
+        <main>
+            <div class="card card-3d-hover bg-white rounded p-4 text-center mx-auto" style="max-width: 480px;">
+                <h2 class="h4 mb-3">Download the Document</h2>
+                <p class="mb-4">Click the button below to download the "Varshan's Vibe With Coding" document:</p>
+                <a href="Varshan-s-Vibe-With-Coding.docx" download class="btn btn-primary btn-lg px-5">
+                    <i class="fas fa-download me-2"></i> Download Document
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
